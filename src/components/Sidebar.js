@@ -5,7 +5,7 @@ import CreateRoomBtn from "./dashboard/CreateRoomBtn";
 import ChatRoom from "./rooms/ChatRoom";
 const Sidebar = () => {
   const topSidebarRef = useRef();
-  const [height, setHeight] = useState();
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
     if (topSidebarRef.current) {
@@ -15,7 +15,7 @@ const Sidebar = () => {
 
   return (
     <div className="h-100 pt-2">
-      <div>
+      <div ref={topSidebarRef}>
         <DashBoardToggle />
         <CreateRoomBtn />
         <Divider> Join Conversation </Divider>
