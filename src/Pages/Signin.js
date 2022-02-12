@@ -40,13 +40,13 @@ const Signin = () => {
               </div>
 
               <div className="mt-3">
-                <Button block color="blue">
-                  <Icon icon="facebook" onClick={onFacebookSignIn} />
+                <Button block color="blue" onClick={onFacebookSignIn}>
+                  <Icon icon="facebook" />
                   Continue with FaceBook
                 </Button>
 
-                <Button block color="green">
-                  <Icon icon="google" onClick={onGoogleSignIn} />
+                <Button block color="green" onClick={onGoogleSignIn}>
+                  <Icon icon="google" />
                   Continue with Google
                 </Button>
               </div>
