@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Divider } from "rsuite";
 import DashBoardToggle from "./dashboard/DashBoardToggle";
 import CreateRoomBtn from "./dashboard/CreateRoomBtn";
-import ChatRoom from "./rooms/ChatRoom";
+import ChatRoomList from "./rooms/ChatRoomList";
 const Sidebar = () => {
   const topSidebarRef = useRef();
   const [height, setHeight] = useState(0);
@@ -20,7 +20,7 @@ const Sidebar = () => {
         <CreateRoomBtn />
         <Divider> Join Conversation </Divider>
       </div>
-      <ChatRoom aboveElementHeight={height} />
+      <ChatRoomList aboveElementHeight={height} />
     </div>
   );
 };
