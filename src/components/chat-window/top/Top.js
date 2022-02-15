@@ -8,7 +8,7 @@ import EditRoomModal from "./EditRoomModal";
 
 const Top = () => {
   const name = useCurrentRoom((v) => v.name);
-
+  const isAdmin = useCurrentRoom((v) => v.isAdmin);
   const isMobile = useMediaQuery();
   return (
     <div>
@@ -27,7 +27,7 @@ const Top = () => {
           <span className="text-disappear">{name}</span>
         </h4>
         <ButtonToolbar className="white-sapce:no-wrap">
-          <EditRoomModal />
+          {isAdmin && <EditRoomModal />}
         </ButtonToolbar>
       </div>
       <div className="d-flex justify-content-between align-items-center">

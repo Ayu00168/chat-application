@@ -31,7 +31,9 @@ const EditRoomModal = () => {
     updateData("name", newName);
   };
 
-  const onDescriptionSave = () => {};
+  const onDescriptionSave = (newDescription) => {
+    updateData("description", newDescription);
+  };
 
   return (
     <div>
